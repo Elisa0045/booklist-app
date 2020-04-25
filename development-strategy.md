@@ -18,3 +18,8 @@ Building this site one step at a time.
 * The user can see the table with all the books added.
 * I wrote in `ui.js`, for display the list of the books.
 * I add a function in the `handler.js` for displaying the list in the screen. 
+
+# 3. User Story: `add books` 
+* The user can add a new book into the list. 
+* I wrote the code in `ui.js`, for add a new book in the list.
+* I add a function in the `handler.js` for adding the new books.
