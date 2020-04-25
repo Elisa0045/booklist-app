@@ -23,3 +23,8 @@ Building this site one step at a time.
 * The user can add a new book into the list. 
 * I wrote the code in `ui.js`, for add a new book in the list.
 * I add a function in the `handler.js` for adding the new books.
+
+# 4. User Story: `remove book` 
+* The user can delete the books from the list. 
+* I wrote the code in `ui.js`, for remove books in the list.
+* I add a function in the `handler.js` for delete the  books in the list just 'clicking' in the delete button.

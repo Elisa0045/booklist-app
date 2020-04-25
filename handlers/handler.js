@@ -8,12 +8,16 @@ var handler = {
     const author = document.querySelector("#author").value;
     const isbn = document.querySelector("#isbn").value;
     //instantiate book
-    const book = new Book(title, author, isbn); 
+    const book = new Book(title, author, isbn);
 
     // UI add book
     UI.addBookToList(book);
     //Clear
     UI.clearFields();
+  },
+  //delete
+  deleteBook: function (event) {
+    UI.deleteBook(event.target);
   },
 };
 //display books
@@ -21,4 +25,8 @@ window.onload = UI.displayBooks();
 // add books
 document.querySelector("#book-form").addEventListener("submit", (e) => {
   handler.addBook(e);
+});
+//remove book
+document.querySelector("#book-list").addEventListener("click", (e) => {
+  handler.deleteBook(e);
 });
