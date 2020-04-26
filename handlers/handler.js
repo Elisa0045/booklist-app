@@ -16,18 +16,34 @@ var handler = {
 
       // UI add book
       UI.addBookToList(book);
+      // add book to store
+      Store.addBook(book);
       //success message
       UI.showAlert("Book Added", "success");
 
       //Clear
       UI.clearFields();
+      // log the user input
+      log.push({
+        handler: "addBook",
+        book: JSON.parse(JSON.stringify(book)),
+      });
     }
   },
   //delete
   deleteBook: function (event) {
     UI.deleteBook(event.target);
+    //delete book from the store
+    Store.removeBook(
+      event.target.parentElement.previousElementSibling.textContent
+    );
+
     //message
     UI.showAlert("Book Removed", "success");
+    //log the user input
+    log.push({
+      handler: "deleteBook",
+    });
   },
 };
 //display books
