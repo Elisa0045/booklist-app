@@ -28,3 +28,8 @@ Building this site one step at a time.
 * The user can delete the books from the list. 
 * I wrote the code in `ui.js`, for remove books in the list.
 * I add a function in the `handler.js` for delete the  books in the list just 'clicking' in the delete button.
+
+# 4. User Story: `validate` 
+* The user can do not continue if any field is empty, that displays an alert message "Please, fill the all fields" to continue.  
+* I wrote the code in `ui.js`, for the validate and vanish the alerts every thee seconds. 
+* I add a function in the `handler.js` for display the message for fill the fields, delete book and add book.
