@@ -7,17 +7,27 @@ var handler = {
     const title = document.querySelector("#title").value;
     const author = document.querySelector("#author").value;
     const isbn = document.querySelector("#isbn").value;
-    //instantiate book
-    const book = new Book(title, author, isbn);
+    //validate
+    if (title === "" || author === "" || isbn === "") {
+      UI.showAlert("Please, fill the all fields", "danger");
+    } else {
+      //instantiate book
+      const book = new Book(title, author, isbn);
 
-    // UI add book
-    UI.addBookToList(book);
-    //Clear
-    UI.clearFields();
+      // UI add book
+      UI.addBookToList(book);
+      //success message
+      UI.showAlert("Book Added", "success");
+
+      //Clear
+      UI.clearFields();
+    }
   },
   //delete
   deleteBook: function (event) {
     UI.deleteBook(event.target);
+    //message
+    UI.showAlert("Book Removed", "success");
   },
 };
 //display books
